@@ -1,0 +1,25 @@
+{
+  "name": "pi-at",
+  "version": "0.1.0",
+  "description": "Agent and skill @ mentions for Pi, routed through existing Pi functionality",
+  "type": "module",
+  "license": "MIT",
+  "keywords": ["pi-package", "pi", "mentions", "subagents"],
+  "files": ["src", "README.md", "LICENSE"],
+  "pi": { "extensions": ["./src/index.ts"] },
+  "engines": { "node": ">=22.18.0" },
+  "scripts": {
+    "test": "node --experimental-strip-types --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit",
+    "check": "npm run typecheck && npm test"
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": ">=1.0.4 <2"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-coding-agent": "1.0.4",
+    "@earendil-works/pi-tui": "1.0.4",
+    "@types/node": "^22.19.0",
+    "typescript": "^5.9.3"
+  }
+}
